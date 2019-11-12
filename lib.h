@@ -7,7 +7,6 @@
 #ifndef MY_LIST_H_
 #define MY_LIST_H_
 
-#include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <sys/types.h>

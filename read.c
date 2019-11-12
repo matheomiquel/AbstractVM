@@ -12,7 +12,7 @@ my_pile_t function[] = {
     {"assert", assert},
     {"dump", dump},
     {"print", print},
-    {"\0", NULL },
+    {"\0", NULL},
 };
 
 int read_file(head_t head, int fd)
@@ -27,14 +27,14 @@ int read_file(head_t head, int fd)
     while(read(fd, buf, 1)) {
         if (semicolone == 0) {
             if (index == 6)
-                return 1;
+                return (1);
             if (buf[0] == ';') {
                 semicolone = 0;
             } else if (buf[0] != 32 || buf[0] != 10) {
                 my_strcat(func, buf);  
             }
             else {
-                if(my_strcmp(func, "exit"))
+                if(my_strcmp(func, "exit") == 0)
                     return (0);
                 for(i = 0;my_strcmp(function[i].str, "\0") != 0 ;i++) {
                     if(my_strcmp(function[i].str, func) == 0)
