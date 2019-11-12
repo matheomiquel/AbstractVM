@@ -64,5 +64,6 @@ int short_to_int(short n);
 float int_to_float(int n);
 double float_to_double(float n);
 int my_getnbr(char *str);
+int before_semicolone(int *semicolone , char buf[1], char func[7], int index, int retour,int i, head_t head, int fd);
 
 #endif
